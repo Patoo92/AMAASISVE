@@ -1,0 +1,30 @@
+footer {
+    background-color: #343a40; /* Color oscuro para el fondo */
+    color: white;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #dc3545; /* Color burdeos al pasar el cursor */
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+.fab {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}

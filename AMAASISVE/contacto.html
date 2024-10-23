@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Contacto</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="/img/logo.jpeg" alt="Logo" style="width: 50px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="/quienessomos.html">¿Quienes Somos?</a></li>
+                <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="container my-5">
+    <h2>CONTACTO</h2>
+    <h3>Selecciona un motivo de contacto:</h3>
+    
+    <!-- Desplegable para seleccionar motivo de contacto -->
+    <div class="form-group">
+        <label for="motivo">Motivo de contacto</label>
+        <select class="form-control" id="motivo" onchange="mostrarFormulario()">
+            <option value="">Selecciona un motivo</option>
+            <option value="donacion">Quiero hacer una donación</option>
+            <option value="voluntariado">Quiero ser voluntario</option>
+            <option value="otros">Otros motivos</option>
+            <option value="oficios">Quiero aplicar a un oficio</option> <!-- Nueva opción para oficios -->
+        </select>
+    </div>
+
+    <!-- Formulario 1: Donación -->
+    <form id="formDonacion" class="d-none">
+        <h4>Motivo: Donación</h4>
+        <div class="form-group">
+            <label for="nombreDonacion">Nombre</label>
+            <input type="text" class="form-control" id="nombreDonacion" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellidoDonacion">Apellido</label>
+            <input type="text" class="form-control" id="apellidoDonacion" placeholder="Tu apellido" required>
+        </div>
+
+        <!-- Radio button para "Sos empresa" -->
+        <div class="form-group">
+            <label>Sos empresa?</label><br>
+            <input type="radio" name="empresa" value="si" onchange="mostrarCampoEmpresa(true)" required> Sí
+            <input type="radio" name="empresa" value="no" onchange="mostrarCampoEmpresa(false)" required> No
+        </div>
+
+        <!-- Campo oculto para el nombre de la empresa -->
+        <div class="form-group d-none" id="campoEmpresa">
+            <label for="nombreEmpresa">Nombre de la empresa</label>
+            <input type="text" class="form-control" id="nombreEmpresa" placeholder="Nombre de la empresa">
+        </div>
+
+        <div class="form-group">
+            <label>Sos particular?</label><br>
+            <input type="radio" name="particular" value="si" required> Sí
+            <input type="radio" name="particular" value="no" required> No
+        </div>
+
+        <div class="form-group">
+            <label for="emailDonacion">Correo Electrónico</label>
+            <input type="email" class="form-control" id="emailDonacion" placeholder="Tu email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefonoDonacion">Teléfono de Contacto</label>
+            <input type="tel" class="form-control" id="telefonoDonacion" placeholder="Tu teléfono" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mensajeDonacion">Mensaje</label>
+            <textarea class="form-control" id="mensajeDonacion" rows="3" placeholder="Tu mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!-- Formulario 2: Voluntariado -->
+    <form id="formVoluntariado" class="d-none">
+        <h4>Motivo: Voluntariado</h4>
+        <div class="form-group">
+            <label>¿Quieres ser voluntario de ASISVE?</label><br>
+            <input type="radio" name="voluntario" value="si" required> Sí
+            <input type="radio" name="voluntario" value="no" required> No
+        </div>
+
+        <div class="form-group">
+            <label for="emailVoluntariado">Correo Electrónico</label>
+            <input type="email" class="form-control" id="emailVoluntariado" placeholder="Tu email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefonoVoluntariado">Teléfono de Contacto</label>
+            <input type="tel" class="form-control" id="telefonoVoluntariado" placeholder="Tu teléfono" required>
+        </div>
+
+        <div class="form-group">
+            <label for="mensajeVoluntariado">Mensaje</label>
+            <textarea class="form-control" id="mensajeVoluntariado" rows="3" placeholder="Tu mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!-- Formulario 3: Otros Motivos -->
+    <form id="formOtros" class="d-none">
+        <h4>Motivo: Otros</h4>
+        <div class="form-group">
+            <label for="nombreOtros">Nombre</label>
+            <input type="text" class="form-control" id="nombreOtros" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellidoOtros">Apellido</label>
+            <input type="text" class="form-control" id="apellidoOtros" placeholder="Tu apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="emailOtros">Correo Electrónico</label>
+            <input type="email" class="form-control" id="emailOtros" placeholder="Tu email" required>
+        </div>
+        <div class="form-group">
+            <label for="telefonoOtros">Teléfono de Contacto</label>
+            <input type="tel" class="form-control" id="telefonoOtros" placeholder="Tu teléfono" required>
+        </div>
+        <div class="form-group">
+            <label for="mensajeOtros">Mensaje</label>
+            <textarea class="form-control" id="mensajeOtros" rows="3" placeholder="Tu mensaje" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!-- Formulario 4: Oficios -->
+    <form id="formOficios" class="d-none">
+        <h4>Motivo: Oficios</h4>
+        <div class="form-group">
+            <label for="nombreOficio">Nombre</label>
+            <input type="text" class="form-control" id="nombreOficio" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellidoOficio">Apellido</label>
+            <input type="text" class="form-control" id="apellidoOficio" placeholder="Tu apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="telefonoOficio">Teléfono de Contacto</label>
+            <input type="tel" class="form-control" id="telefonoOficio" placeholder="Tu teléfono" required>
+        </div>
+        <div class="form-group">
+            <label for="emailOficio">Correo Electrónico</label>
+            <input type="email" class="form-control" id="emailOficio" placeholder="Tu correo electrónico" required>
+        </div>
+        <div class="form-group">
+            <label for="cv">Subir CV</label>
+            <input type="file" class="form-control-file" id="cv" accept=".pdf,.doc,.docx" required>
+        </div>
+        <div class="form-group">
+            <label for="carta">Carta de Presentación</label>
+            <textarea class="form-control" id="carta" rows="4" placeholder="Escribe tu carta de presentación" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+<script>
+    // Función para mostrar los formularios según el motivo seleccionado
+    function mostrarFormulario() {
+        document.getElementById("formDonacion").classList.add("d-none");
+        document.getElementById("formVoluntariado").classList.add("d-none");
+        document.getElementById("formOtros").classList.add("d-none");
+        document.getElementById("formOficios").classList.add("d-none");
+
+        var motivo = document.getElementById("motivo").value;
+        if (motivo === "donacion") {
+            document.getElementById("formDonacion").classList.remove("d-none");
+        } else if (motivo === "voluntariado") {
+            document.getElementById("formVoluntariado").classList.remove("d-none");
+        } else if (motivo === "otros") {
+            document.getElementById("formOtros").classList.remove("d-none");
+        } else if (motivo === "oficios") {
+            document.getElementById("formOficios").classList.remove("d-none");
+        }
+    }
+
+    // Función para mostrar/ocultar el campo de "Nombre de la empresa"
+    function mostrarCampoEmpresa(esEmpresa) {
+        if (esEmpresa) {
+            document.getElementById("campoEmpresa").classList.remove("d-none");
+        } else {
+            document.getElementById("campoEmpresa").classList.add("d-none");
+        }
+    }
+</script>
+
+</body>
+</html>
