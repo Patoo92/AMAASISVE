@@ -3,71 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Css/style.css">
+    <title>Asociación ASISVE</title>
+    <!-- Rutas de CSS y librerías -->
+    <link rel="stylesheet" href="./Css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Barra superior con información de contacto -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between">
+            <div class="contact-info">
+                <span><i class="fas fa-map-marker-alt"></i> Encuentra una Ubicación</span>
+                <span><i class="fas fa-phone-alt"></i> +34 123 45 67 89</span>
+                <span><i class="fas fa-envelope"></i>geniket256@aqqor.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/aso.asisve.manoayuda/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@aso.asisve.manoayuda"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/1234567890"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="/img/logo.jpeg" alt="Logo" style="width: 100px;"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="/quienessomos.html">¿Quienes Somos?</a></li>
-                <li class="nav-item"><a class="nav-link" href="/servicios.html">Servicios</a></li>
-                <li class="nav-item"><a class="nav-link" href="/contacto.html">Contacto</a></li>
-            </ul>
+    <!-- Barra de navegación principal -->
+    <nav class="navbar navbar-expand-lg main-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.jpeg" alt="Logo de la empresa" class="logo-icon"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Iniciar Sesión</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-
 <!-- Sección Inicio -->
 <section id="inicio" class="text-center my-5">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        
+        <!-- Indicadores personalizados -->
+<!--         <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        </ol> -->
+
         <div class="carousel-inner">
             <!-- Primera Imagen con Botón Contáctanos -->
             <div class="carousel-item active">
                 <img src="/img/img_carrusel1.jpg" class="d-block w-100" alt="Imagen 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>¡Contáctanos!</h5>
-                    <a href="/contacto.html" class="btn btn-primary">Contáctanos</a>
+                <div class="carousel-caption custom-caption">
+                    <!-- <h5 class="caption-title">¡Contáctanos!</h5> -->
+                    <a href="/contacto.html" class="btn btn-primary custom-btn">Contáctanos</a>
                 </div>
             </div>
 
+            
+          
             <!-- Segunda Imagen con Botón Colabora -->
             <div class="carousel-item">
-                <img src="/img/img_carrusel2.jpg" class="d-block w-100" alt="Imagen 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>¡Colabora con nosotros!</h5>
-                    <a href="/contacto.html#formVoluntariado" class="btn btn-secondary">Colabora</a>
+                <img src="/img/img_carrusel3.jpg" class="d-block w-100" alt="Imagen 2">
+                <div class="carousel-caption custom-caption">
+                    <!-- <h5 class="caption-title">¡Colabora con nosotros!</h5> -->
+                    <a href="/contacto.html#formVoluntariado" class="btn btn-secondary custom-btn">Colabora</a>
                 </div>
             </div>
-
-            <!-- Tercera Imagen con Botón Testimonios -->
             <div class="carousel-item">
-                <img src="/img/img_carrusel3.jpg" class="d-block w-100" alt="Imagen 3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Lee los testimonios</h5>
-                    <a href="#testimonios" class="btn btn-success">Testimonios</a>
+                <img src="/img/img_carrusel2.jpg" class="d-block w-100" alt="Imagen 3">
+                <div class="carousel-caption custom-caption">
+                    <!-- <h5 class="caption-title">Lee los testimonios</h5> -->
+<!--                     <a href="#testimonios" class="btn btn-success custom-btn">Testimonios</a> -->
                 </div>
             </div>
 
-            <!-- Otras imágenes del carrusel -->
+            <!-- Cuarta Imagen sin botón -->
             <!-- <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="Imagen 4">
+                <img src="/img/img_carrusel4.jpg" class="d-block w-100" alt="Imagen 4">
+                <div class="carousel-caption custom-caption">
+                    <h5 class="caption-title">¡Mira lo que hacemos!</h5>
+                    <a href="#mira-lo-que-hacemos" class="btn btn-info custom-btn">Ver Más</a> 
+                </div>
             </div>
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="Imagen 5">
-            </div>
-            <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="Imagen 6">
-            </div> -->
-        </div>
+        </div> -->
 
         <!-- Controles del carrusel -->
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -81,112 +109,84 @@
     </div>
 </section>
 
+
 <!-- Nueva Sección: Servicios -->
-<section id="servicios" class="my-5">
-    <div class="container">
-        <h2 class="text-center mb-4">Nuestra Acciòn Social</h2>
-        <p>En ASISVE, trabajamos diariamente para apoyar a las comunidades más vulnerables, especialmente a las familias migrantes que necesitan un impulso para superar las dificultades. A través de nuestros programas clave, brindamos ayuda humanitaria, servicios de atención médica y oportunidades de desarrollo. Estos son algunos de nuestros principales servicios:</p>
-        <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/img/img_carrusel1.jpg" class="card-img-top" alt="Servicio 1">
-                    <div class="card-body">
-                        <h5 class="card-title"> Entrega De alimentos </h5>
-                        <p class="card-text">Proveemos alimentos nutritivos y esenciales a familias migrantes en situación de vulnerabilidad. Cada semana, distribuimos cestas que incluyen productos básicos para garantizar una alimentación balanceada y contribuir al bienestar de quienes más lo necesitan.</p>
-                        <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#leerMas1">Leer más</a>
-                        <div id="leerMas1" class="collapse">
-                            <p>Información adicional sobre el servicio 1 que se muestra al hacer clic en 'Leer más'.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/img/img_carrusel2.jpg" class="card-img-top" alt="Servicio 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Refugio Temporal</h5>
-                        <p class="card-text">Ofrecemos un lugar seguro para personas en riesgo, proporcionando un techo temporal y apoyo emocional. Nuestro refugio busca ser más que un espacio físico: es un lugar de esperanza, donde quienes enfrentan situaciones críticas pueden sentirse acogidos y protegidos.</p>
-                        <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#leerMas2">Leer más</a>
-                        <div id="leerMas2" class="collapse">
-                            <p>Información adicional sobre el servicio 2 que se muestra al hacer clic en 'Leer más'.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/img/img_carrusel3.jpg" class="card-img-top" alt="Servicio 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Jornada Medica</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maxime assumenda ipsam et nemo nisi unde aliquam tempora, molestias provident numquam, dolores rem itaque ex, suscipit eaque fuga quisquam sapiente?</p>
-                        <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#leerMas3">Leer más</a>
-                        <div id="leerMas3" class="collapse">
-                            <p>Información adicional sobre el servicio 3 que se muestra al hacer clic en 'Leer más'.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<h1>Servicios</h1>
+<div class="service-container">
+    <div class="service-card">
+        <img src="/img/entregaalimentos.jpg" alt="Descripción 1">
+        <h3>Jornada De Entrega De Alimentos</h3>
+        <p> Proveemos alimentos nutritivos y esenciales a familias migrantes en situación de vulnerabilidad. Cada semana, distribuimos cestas que incluyen productos básicos para garantizar una alimentación balanceada y contribuir al bienestar de quienes más lo necesitan</p>
     </div>
-</section>
+    <div class="service-card">
+        <img src="/img/refugio.jpg" alt="Descripción 2">
+        <h3>Refugio Temporal</h3>
+        <p>Ofrecemos un lugar seguro para personas en riesgo, proporcionando un techo temporal y apoyo emocional. Nuestro refugio busca ser más que un espacio físico: es un lugar de esperanza, donde quienes enfrentan situaciones críticas pueden sentirse acogidos y protegidos.</p>
+    </div> 
+    <div class="service-card">
+        <img src="/img/medico.jpg" alt="">
+        <h3>Jornada Medica Especial</h3>
+        <p>En nuestra organización, también brindamos jornadas de salud que incluyen atención especializada en pediatría, medicina general y dermatología. Además, recibimos donaciones de medicamentos, los cuales son entregados de manera segura y responsable por nuestro personal especializado, siempre bajo receta médica. Estas jornadas permiten que las personas más necesitadas accedan a un cuidado médico integral y gratuito.</p>
+    </div>
+    <div class="service-card">
+        <img src="/img/ropero.jpg" alt="Descripción 4">
+        <h3>Ropero Solidario</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nulla euismod, consequat sapien non, cursus erat.</p>
+    </div>
+</div>
+
+
 
 <!-- Sección Testimonios -->
 <section id="testimonios" class="my-5">
     <div class="container">
         <h2 class="text-center">Testimonios</h2>
-        <div class="row">
-            <!-- Primer Testimonio -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/img/img_carrusel1.jpg" class="card-img-top" alt="Testimonio 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre Persona 1</h5>
-                        <p class="card-text">"Texto corto del testimonio 1..."</p>
-                        <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#testimonio1Mas">Leer más</a>
-                        <div id="testimonio1Mas" class="collapse">
-                            <p>Texto completo del testimonio 1...</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="testimonios-grid">
+            <!-- Testimonios -->
+<!--             <div class="testimonio-card grande morado">
+                <img src="/img/testimonios.webp" alt="Foto de perfil de Daniel Clifford" class="perfil-imagen">
+                <h5>Daniel Clifford</h5>
+                <p>Verified Graduate</p>
+                <p>"Recibí una oferta de trabajo a mitad de curso, y los temas que aprendí eran actuales. Honestamente, sentí que obtuve el valor de cada centavo."</p>
+                <button class="leer-mas">Leer Más</button>
+            </div> -->
+            <div class="testimonio-card mediano gris">
+                <img src="/img/testimonios.webp" alt="Foto de perfil de Jonathan Walters" class="perfil-imagen">
+                <h5>Jonathan Walters</h5>
+                <p>Verified Graduate</p>
+                <p>"El equipo fue muy solidario y me mantuvo motivado durante el proceso. Uno de los mejores pasos que he tomado."</p>
+                <button class="leer-mas">Leer Más</button>
             </div>
-            
-            <!-- Segundo Testimonio -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/img/img_carrusel2.jpg" class="card-img-top" alt="Testimonio 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre Persona 2</h5>
-                        <p class="card-text">"Texto corto del testimonio 2..."</p>
-                        <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#testimonio2Mas">Leer más</a>
-                        <div id="testimonio2Mas" class="collapse">
-                            <p>Texto completo del testimonio 2...</p>
-                        </div>
-                    </div>
-                </div>
+<!--             <div class="testimonio-card chico blanco">
+                <img src="/img/testimonios.webp" alt="Foto de perfil de Jeanette Harmon" class="perfil-imagen">
+                <h5>Jeanette Harmon</h5>
+                <p>Verified Graduate</p>
+                <p>"Una experiencia completamente maravillosa y gratificante."</p>
+                <button class="leer-mas">Leer Más</button>
+            </div> -->
+            <div class="testimonio-card grande azul">
+                <img src="/img/testimonios.webp" alt="Foto de perfil de Patrick Abrams" class="perfil-imagen">
+                <h5>Patrick Abrams</h5>
+                <p>Verified Graduate</p>
+                <p>"Increíble apoyo de los profesores que ya habían hecho el bootcamp. Fue fácil aprender de ellos y de sus experiencias."</p>
+                <button class="leer-mas">Leer Más</button>
             </div>
-
-            <!-- Tercer Testimonio -->
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="/img/img_carrusel1.jpg" class="card-img-top" alt="Testimonio 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Nombre Persona 3</h5>
-                        <p class="card-text">"Texto corto del testimonio 3..."</p>
-                        <a href="#" class="btn btn-primary" data-toggle="collapse" data-target="#testimonio3Mas">Leer más</a>
-                        <div id="testimonio3Mas" class="collapse">
-                            <p>Texto completo del testimonio 3...</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonio-card mediano blanco">
+                <img src="/img/testimonios.webp" alt="Foto de perfil de Kira Whittle" class="perfil-imagen">
+                <h5>Kira Whittle</h5>
+                <p>Verified Graduate</p>
+                <p>"Una experiencia transformadora. Lo recomiendo totalmente."</p>
+                <button class="leer-mas">Leer Más</button>
             </div>
+            <!-- Agregar más testimonios si se desea -->
         </div>
     </div>
 </section>
+
+
+<!--Fin Sección Testimonios -->
+
 
 <!-- Sección de Google Maps --> 
 <section id="ubicacion" class="my-5">
@@ -216,9 +216,9 @@
         <h2 class="text-center">Nuestros Colaboradores Destacados</h2>
         <div class="row text-center">
             <!-- Colaborador 1 -->
-            <div class="col-md-3 col-sm-6 my-3">
+            <div class="col-md-3 col-sm-6 my-3 collaborator">
                 <div class="card">
-                    <img src="/img/amazon-logo-png.webp" class="card-img-top img-fluid" alt="Colaborador 1">
+                    <img src="/img/colaborador 1.webp" class="card-img-top img-fluid" alt="Colaborador 1">
                     <div class="card-body">
                         <h5 class="card-title">AMAZON</h5>
                         <p class="card-text">Apoyando nuestra misión desde 2020.</p>
@@ -227,41 +227,52 @@
                 </div>
             </div>
             <!-- Colaborador 2 -->
-            <div class="col-md-3 col-sm-6 my-3">
+            <div class="col-md-3 col-sm-6 my-3 collaborator">
                 <div class="card">
-                    <img src="/img/Logo-altius-v2.png" class="card-img-top img-fluid" alt="Colaborador 2">
+                    <img src="/img/Colaborador 2.jpg" class="card-img-top img-fluid" alt="Colaborador 2">
                     <div class="card-body">
-                        <h5 class="card-title">ALTIUS</h5>
+                        <h5 class="card-title">BANCO DE ALIMENTO</h5>
                         <p class="card-text">Colaborando en proyectos clave.</p>
-                        <a href="https://www.marca2.com" class="btn btn-primary" target="_blank">Visitar</a>
+                        
                     </div>
                 </div>
             </div>
             <!-- Colaborador 3 -->
-            <div class="col-md-3 col-sm-6 my-3">
+            <div class="col-md-3 col-sm-6 my-3 collaborator">
                 <div class="card">
-                    <img src="/img/bam-logo.jpg" class="card-img-top img-fluid" alt="Colaborador 3">
+                    <img src="/img/colaborador 3.png" class="card-img-top img-fluid" alt="Colaborador 3">
                     <div class="card-body">
-                        <h5 class="card-title">BANCO DE ALIMENTOS</h5>
+                        <h5 class="card-title">Diaconia España</h5>
                         <p class="card-text">Apoyo constante en nuestras actividades.</p>
                         <a href="https://www.marca3.com" class="btn btn-primary" target="_blank">Visitar</a>
                     </div>
                 </div>
             </div>
             <!-- Colaborador 4 -->
-            <div class="col-md-3 col-sm-6 my-3">
+            <div class="col-md-3 col-sm-6 my-3 collaborator">
                 <div class="card">
-                    <img src="/img/remar_logo.png" class="card-img-top img-fluid" alt="Colaborador 4">
+                    <img src="/img/colaborador 4.webp" class="card-img-top img-fluid" alt="Colaborador 4">
                     <div class="card-body">
-                        <h5 class="card-title">REMAR</h5>
+                        <h5 class="card-title">Comunidad De Madrid</h5>
                         <p class="card-text">Un aliado en el desarrollo de nuestra visión.</p>
-                        <a href="https://www.marca4.com" class="btn btn-primary" target="_blank">Visitar</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Colaborador 5 -->
+            <div class="col-md-3 col-sm-6 my-3 collaborator">
+                <div class="card">
+                    <img src="/img/colaborador 5.webp" class="card-img-top img-fluid" alt="Colaborador 5">
+                    <div class="card-body">
+                        <h5 class="card-title">Alcamar/h5>
+                        <p class="card-text">Descripción del colaborador 5.</p>
+                        <a href="https://www.marca5.com" class="btn btn-primary" target="_blank">Visitar</a>
+                    </div>
+                </div>
+            </div>
+            
 </section>
+
 
 <!-- Estilos CSS para las imágenes -->
 <style>
@@ -271,9 +282,6 @@
         object-fit: cover; /* Ajusta la imagen sin distorsión */
     }
 </style>
-
-
-
 
 <!-- Footer -->
 <footer class="bg-dark text-white py-4">
@@ -307,14 +315,15 @@
             </div>
         </div>
     </div>
+    <div class="text-center mt-3">
+        <p>&copy; 2024 Asociación ASISVE. Todos los derechos reservados.</p>
+    </div>
 </footer>
 
-<!-- FontAwesome para iconos -->
-
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</body> 
+    <!-- Scripts de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+</body>
 </html>
